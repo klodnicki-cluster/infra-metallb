@@ -1,0 +1,21 @@
+metallb:
+  controller:
+    tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Equal
+        effect: NoSchedule
+
+  speaker:
+    tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Equal
+        effect: NoSchedule
+
+  crds:
+    enabled: true
+
+  prometheus:
+    podMonitor:
+      enabled: false
+    serviceMonitor:
+      enabled: false

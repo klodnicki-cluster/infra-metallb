@@ -1,0 +1,9 @@
+apiVersion: v2
+name: infra-metallb
+version: 0.1.0
+description: MetalLB deployment for the cluster
+
+dependencies:
+  - name: metallb
+    version: 0.16.1
+    repository: https://metallb.github.io/metallb
