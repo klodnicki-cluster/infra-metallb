@@ -1,8 +1,17 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: services
+  name: static
   namespace: infra-metallb
 spec:
   addresses:
   - 192.168.33.1-192.168.33.254
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: services
+  namespace: infra-metallb
+spec:
+  addresses:
+  - 192.168.34.1-192.168.34.254

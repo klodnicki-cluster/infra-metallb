@@ -5,4 +5,5 @@ metadata:
   namespace: infra-metallb
 spec:
   ipAddressPools:
+  - static
   - services
